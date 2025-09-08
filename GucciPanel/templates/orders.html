@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Buy VIP</title></head>
+<body>
+<h1>Buy VIP</h1>
+<form method="POST">
+<label>Duration:</label>
+<select name="duration">
+{% for days, price in price_map.items() %}
+<option value="{{ days }}">{{ days }} days - ₹{{ price }}</option>
+{% endfor %}
+</select><br><br>
+
+<label>Amount Paid (₹):</label>
+<input type="number" name="amount" step="0.01" required><br><br>
+
+<label>Transaction ID:</label>
+<input type="text" name="transaction_id" required><br><br>
+
+<h3>Scan QR to pay:</h3>
+<p>PhonePe UPI: 8240115575@axl</p>
+<img src="{{ url_for('static', filename='phonepe_qr.png') }}" alt="PhonePe QR" width="200"><br><br>
+
+<p>Google Pay UPI: mondaljii82@okhdfcbank</p>
+<img src="{{ url_for('static', filename='gpay_qr.png') }}" alt="Google Pay QR" width="200"><br><br>
+
+<button type="submit">Submit Payment</button>
+</form>
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

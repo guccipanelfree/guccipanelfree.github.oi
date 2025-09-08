@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Notifications</title></head>
+<body class="container mt-4">
+  <h2>Notifications</h2>
+  {% if notifs %}
+    <ul>
+      {% for n in notifs %}
+        <li>{{ n[1] }} <small>({{ n[2] }})</small></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No new notifications.</p>
+  {% endif %}
+  <a href="/dashboard" class="btn btn-secondary">Back</a>
+</body></html>

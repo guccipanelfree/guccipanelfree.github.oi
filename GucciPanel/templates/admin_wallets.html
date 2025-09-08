@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Admin Wallets</title></head>
+<body class="container mt-4">
+  <h2>Wallet Balances</h2>
+  <table class="table"><tr><th>ID</th><th>Email</th><th>Gold</th><th>Diamonds</th><th>Wallet</th></tr>
+    {% for w in wallets %}
+      <tr><td>{{ w[0] }}</td><td>{{ w[1] }}</td><td>{{ w[2] }}</td><td>{{ w[3] }}</td><td>{{ w[4] }}</td></tr>
+    {% endfor %}
+  </table>
+  <a href="/admin" class="btn btn-secondary">Back</a>
+</body></html>

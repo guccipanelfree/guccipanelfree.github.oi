@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GucciPanel - Wallet</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; }
+        .box { width: 400px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        h2 { text-align: center; }
+        .balance { font-size: 18px; margin: 10px 0; }
+        .btn { display: block; padding: 10px; margin: 10px 0; background: #222; color: white; text-align: center; border-radius: 5px; text-decoration: none; }
+        .btn:hover { background: #444; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>My Wallet</h2>
+        <p class="balance">💰 Funds: ₹{{ wallet.balance }}</p>
+        <p class="balance">💎 Diamonds: {{ wallet.diamonds }}</p>
+        <p class="balance">🏆 VIP Status: {{ wallet.vip_status }}</p>
+
+        <a href="/buy_diamond" class="btn">Buy Diamonds</a>
+        <a href="/buy_vip" class="btn">Buy VIP</a>
+        <a href="/transactions" class="btn">View Transactions</a>
+    </div>
+</body>
+</html>

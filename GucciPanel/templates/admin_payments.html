@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Admin Payments</title></head>
+<body class="container mt-4">
+  <h2>Submitted Payments</h2>
+  <table class="table"><tr><th>ID</th><th>User</th><th>Txn ID</th><th>Product</th><th>Amount</th><th>Status</th><th>Date</th><th>Action</th></tr>
+    {% for p in payments %}
+      <tr>
+        <td>{{ p[0] }}</td><td>{{ p[1] }}</td><td>{{ p[2] }}</td><td>{{ p[3] }}</td><td>{{ p[5] }}</td><td>{{ p[6] }}</td><td>{{ p[7] }}</td>
+        <td><a href="/admin/payments/approve/{{ p[0] }}" class="btn btn-success btn-sm">Approve</a> <a href="/admin/payments/reject/{{ p[0] }}" class="btn btn-danger btn-sm">Reject</a></td>
+      </tr>
+    {% else %}
+      <tr><td colspan="8">No payments</td></tr>
+    {% endfor %}
+  </table>
+  <a href="/admin" class="btn btn-secondary">Back</a>
+</body></html>

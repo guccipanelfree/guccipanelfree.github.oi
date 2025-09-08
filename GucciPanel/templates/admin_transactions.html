@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>All Transactions</title></head>
+<body class="container mt-4">
+  <h2>All Transactions</h2>
+  <table class="table"><tr><th>ID</th><th>User</th><th>Type</th><th>Amount</th><th>Details</th><th>Date</th></tr>
+    {% for r in records %}
+      <tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td><td>{{ r[4] }}</td><td>{{ r[5] }}</td></tr>
+    {% endfor %}
+  </table>
+  <a href="/admin" class="btn btn-secondary">Back</a>
+</body></html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Watch Ads</title></head>
+<body class="container mt-4">
+  <h2>Watch Ads & Earn</h2>
+  <p>You have watched: <strong>{{ ads_watched }}</strong> ads</p>
+  <div style="width:300px;height:250px;background:#222;color:#fff;display:flex;align-items:center;justify-content:center;margin:auto;">Ad Placeholder</div>
+  <form method="POST" action="/ads_click" class="mt-3">
+    <button class="btn btn-success">I finished the ad (simulate)</button>
+  </form>
+  <a href="/rewards" class="btn btn-primary mt-2">View Rewards</a>
+</body></html>

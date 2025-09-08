@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Add Funds</title></head>
+<body class="container mt-4">
+  <h2>Add Gold / Diamonds to user</h2>
+  {% if message %}<div class="alert alert-success">{{ message }}</div>{% endif %}
+  <form method="POST">
+    <div class="mb-2"><label>Select User</label>
+      <select name="user_id" class="form-select">
+        {% for u in users %}<option value="{{ u[0] }}">ID {{ u[0] }} - {{ u[1] }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="mb-2"><label>Type</label>
+      <select name="fund_type" class="form-select"><option value="gold">Gold</option><option value="diamond">Diamond</option></select>
+    </div>
+    <div class="mb-2"><label>Amount</label><input type="number" name="amount" class="form-control" required></div>
+    <button class="btn btn-success">Add Funds</button>
+  </form>
+  <a href="/admin" class="btn btn-link mt-3">Back</a>
+</body></html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Rewards</title></head>
+<body class="container mt-4">
+  <h2>Your Rewards</h2>
+  <p>Ads watched: <strong>{{ ads_watched }}</strong></p>
+  <div class="row">
+    {% for r in rewards %}
+      <div class="col-md-6">
+        <div class="card p-3 mb-3">
+          <h5>{{ r.type }}</h5>
+          <p>{{ r.ads_required }} ads → {{ r.reward }} coins</p>
+          {% if r.unlocked %}
+            <form method="post" action="/claim_reward/{{ r.type }}">
+              <button class="btn btn-success">Claim</button>
+            </form>
+          {% else %}
+            <button class="btn btn-secondary" disabled>Locked</button>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <a href="/watch_ads" class="btn btn-primary">Watch Ads</a>
+</body></html>

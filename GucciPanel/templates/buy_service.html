@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GucciPanel - Buy Services</title>
+    <style>
+        body { font-family: Arial; background: #f0f0f0; }
+        .box { width: 500px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        h2 { text-align: center; }
+        select, input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #222; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #444; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Buy Services</h2>
+        <form method="post">
+            <label>Select Service</label>
+            <select name="service" required>
+                <option value="followers">Instagram Followers</option>
+                <option value="likes">Instagram Likes</option>
+                <option value="views">Instagram Views</option>
+                <option value="subs">YouTube Subscribers</option>
+                <option value="ytlikes">YouTube Likes</option>
+                <option value="ytviews">YouTube Views</option>
+                <option value="refill_followers">Refill Followers</option>
+                <option value="permanent_followers">Permanent Followers</option>
+            </select>
+
+            <label>Enter Profile/Channel Link</label>
+            <input type="text" name="link" placeholder="Paste link here..." required>
+
+            <label>Quantity</label>
+            <input type="number" name="quantity" placeholder="Enter number..." min="10" required>
+
+            <button type="submit">Buy Now</button>
+        </form>
+    </div>
+</body>
+</html>
